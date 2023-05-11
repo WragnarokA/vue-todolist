@@ -9,8 +9,24 @@
 </head>
 <body id="app">
 
+    <div class="tasks">
+        <input v-model="newTask.text" @keyup.enter="addTask()" type="text" placeholder="Scrivi un promemoria" class="margin" >
+        <span v-show="error" class="red">Min 3 caratteri</span>
+        <button @click="addTask()" class="margin" >Aggiugi task</button>
+        <ul class="margin" >
+            <li v-for="task,i in taskList">{{task}}
+                <button @click="changeTask(i)" class="marginX" >Cambia</button>
+                <button @click="removeTask(i)" class="marginX" >Rimuovi</button>
+            </li>
+        </ul>
 
-    <script src="./js/main.js"></script>
+    </div>
+
+
+
+
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
