@@ -32,9 +32,16 @@ h1{
     margin-left: 1rem;
 }
 
-.red{
-    color: red !important;
+.red{color: red !important;}
+
+.green{color: green !important;}
+
+.btn{  
+    min-width: 4rem;
+    border-radius: 5px;
+    border: none;
 }
+
     
 .barrato{
     text-decoration: line-through;
